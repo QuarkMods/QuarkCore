@@ -1,6 +1,5 @@
 package me.uquark.quarkcore.block;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -11,8 +10,8 @@ public class AbstractBlock extends Block {
     public final Identifier id;
     public final BlockItem item;
 
-    protected AbstractBlock(String modid, String name, FabricBlockSettings blockSettings, Item.Settings itemSettings) {
-        super(blockSettings.build());
+    protected AbstractBlock(String modid, String name, net.minecraft.block.AbstractBlock.Settings blockSettings, Item.Settings itemSettings) {
+        super(blockSettings);
         id = new Identifier(modid, name);
         item = new BlockItem(this, itemSettings);
     }
