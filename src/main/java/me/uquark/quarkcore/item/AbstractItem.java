@@ -1,8 +1,9 @@
 package me.uquark.quarkcore.item;
 
 import net.minecraft.item.Item;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public abstract class AbstractItem extends Item {
     public final Identifier id;
@@ -13,6 +14,6 @@ public abstract class AbstractItem extends Item {
     }
 
     public void register() {
-        Registry.register(Registry.ITEM, id, this);
+        Registry.register(Registries.ITEM, id, this);
     }
 }

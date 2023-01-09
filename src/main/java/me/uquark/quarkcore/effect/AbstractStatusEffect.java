@@ -2,8 +2,9 @@ package me.uquark.quarkcore.effect;
 
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public abstract class AbstractStatusEffect extends StatusEffect {
     public final Identifier id;
@@ -14,6 +15,6 @@ public abstract class AbstractStatusEffect extends StatusEffect {
     }
 
     public void register() {
-        Registry.register(Registry.STATUS_EFFECT, id, this);
+        Registry.register(Registries.STATUS_EFFECT, id, this);
     }
 }

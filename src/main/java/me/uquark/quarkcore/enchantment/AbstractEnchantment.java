@@ -5,8 +5,9 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentTarget;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class AbstractEnchantment extends Enchantment {
     public final Identifier id;
@@ -17,7 +18,7 @@ public class AbstractEnchantment extends Enchantment {
     }
 
     public void register() {
-        Registry.register(Registry.ENCHANTMENT, id, this);
+        Registry.register(Registries.ENCHANTMENT, id, this);
     }
 
     public boolean isEnchanted(ItemStack stack) {

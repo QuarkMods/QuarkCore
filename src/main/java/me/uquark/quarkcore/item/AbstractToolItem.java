@@ -2,8 +2,9 @@ package me.uquark.quarkcore.item;
 
 import net.minecraft.item.ToolItem;
 import net.minecraft.item.ToolMaterial;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public abstract class AbstractToolItem extends ToolItem {
     public final Identifier id;
@@ -14,6 +15,6 @@ public abstract class AbstractToolItem extends ToolItem {
     }
 
     public void register() {
-        Registry.register(Registry.ITEM, id, this);
+        Registry.register(Registries.ITEM, id, this);
     }
 }
